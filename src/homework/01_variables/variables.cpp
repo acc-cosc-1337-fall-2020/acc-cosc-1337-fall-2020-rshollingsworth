@@ -1,14 +1,17 @@
 #include "variables.h"
+//define constant tax rate
+const double tax_rate = 0.0675;
 
-//example
-int add_numbers(int num1, int num2)
+//find sales tax from meal amont and sales rate
+double get_sales_tax_amount(double meal_amount)
 {
-	return num1 + num2;
+	return tax_rate * meal_amount;
+
 }
 
-//write code for multiply_numbers function here
-//function returns product of num1 and num2
 
-
-
-
+//get tip from meal amount and tip rate
+double get_tip_amount(double meal_amount, double tip_rate)
+{
+	return meal_amount * tip_rate;
+}
