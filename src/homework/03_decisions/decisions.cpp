@@ -39,10 +39,60 @@ int get_grade_points(std::string letter_grade)
 
 
 //Write code for function calculate_gpa that accepts an int named credit_hours and
-//a double named credit_points.  The function returns the quotient of credit_points divided by
+//a double named credit_points.  The function returns the queotient of credit_points divided by
 //credit_hours. In the function account for division by zero by returning a -1.
 double calculate_gpa(int credit_hours, double credit_points)
 {
 	return credit_points / credit_hours;
 }
 
+
+
+std::string get_letter_grade_using_if(int grade)
+{
+	if (grade > 89) 
+	{
+		return "A";
+	}
+	else if (grade > 79)
+	{
+		return "B";
+	}
+	else if (grade > 69)
+	{
+		return "C";
+	}
+	else if (grade > 59)
+	{
+		return "D";
+	}
+	else
+	{
+	return "F";
+	}
+}
+
+
+std::string get_letter_grade_using_switch(int grade)
+{
+	switch(grade/10)
+	{
+		case 10:
+			return "A";
+			break;
+		case 9:
+			return "A";
+			break;
+		case 8:
+			return "B";
+			break;
+		case 7:
+			return "C";
+			break;
+		case 6:
+			return "D";
+			break;
+		default:
+			return "F";
+	}
+}
